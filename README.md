@@ -1,7 +1,5 @@
 # flight-for-tonight
 
-# Challenge 06: Serverd Side APIs - Weather Dashboard
-
 ## Links
 
 * 🌎 [Live Github Page] (https://gallolopez1.github.io/weather-dashboard/)
