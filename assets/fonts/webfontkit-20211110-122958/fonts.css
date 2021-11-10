@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'lemon_tuesdayregular';
+    src: url('assets/fonts/lemon_tuesday/Lemon Tuesday.otf');
+    src: url('assets/fonts/webfontkit-20211110-122958/lemon_tuesday-webfont.woff2') format('woff2'), url('assets/fonts/webfontkit-20211110-122958/lemon_tuesday-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
