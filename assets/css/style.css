@@ -1,3 +1,8 @@
+* {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
 #search-container {
     position: fixed;
     top: 50%;
@@ -10,7 +15,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bolder;
     font-size: xx-large;
-    color: rgb(61, 134, 119);
+    color: rgb(54, 112, 99);
     text-align: center;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 1rem;
@@ -22,10 +27,11 @@
 
 h1 {
     font-family: 'Permanent Marker', cursive;
-    color: white;
 }
 
-h3 {
-    font-family: 'Open Sans', sans-serif;
-    color: white;
+footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
 }
