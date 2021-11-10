@@ -36,5 +36,3 @@
 ```
 
 ## Resource Links
-
-## Link to deployed application: https://mloercher.github.io/flight-for-tonight/
