@@ -2,8 +2,8 @@
 
 ## Links
 
-* 🌎 [Live Github Page] (https://gallolopez1.github.io/weather-dashboard/)
-* 💾 [Repo] (https:///mloercher.github.io/flight-for-tonight)
+* 🌎 [Live Github Page] (https://mloercher.github.io/flight-for-tonight)
+* 💾 [Repo] (https://github.com/mloercher/flight-for-tonight)
 
 ## <u>App - Preview:</u>
 
