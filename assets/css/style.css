@@ -6,6 +6,20 @@
     transform: translate(-50%, -50%);
 }
 
+#search-destination {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    color: rgb(61, 134, 119);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+}
+
+#button-addon2 {
+    border-radius: .25rem;
+}
+
 h1 {
     font-family: 'Permanent Marker', cursive;
     color: white;
@@ -13,5 +27,5 @@ h1 {
 
 h3 {
     font-family: 'Open Sans', sans-serif;
-    color: rgb(197, 197, 197);
+    color: white;
 }
