@@ -8,6 +8,8 @@
 // compare the price for different flights against the users budget 
 // display the available flights
 
+//Gabriel will update CORS branch 11/11
+
 
 // variables
 var expectedPrice = [];
