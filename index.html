@@ -18,14 +18,21 @@
 
 <body style="background-image: url('assets/images/inspiration_02.jpg');">
     <main>
-        <div class="container center-align" id="search-container">
+        <div class="container center-align" id="intro">
             <h1>Flight For Tonight</h1>
             <h4>Where will your money take you?</h4>
             <br>
-            <p>About</p>
             <br>
-            <input type="text" id="search-destination" class="" placeholder="$">
-            <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+            <p>We developed this app to free your sense of adventure! <br> <b>ALL</b> of us love to travel and money shouldn't impede us from doing so. That is why, no matter what your financial situation is we will help you find a destination. Just type
+                your budget, origin, departure date and get ready to discover your next journey!</p>
+            <br>
+            <div id="search-container">
+                <input type="text" id="search-destination" class="origin" placeholder="Origin">
+                <input type="date" id="search-destination" class="origin-date" placeholder="Departure Date">
+                <input type="text" id="search-destination" class="budget" placeholder="$">
+                <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+            </div>
+            <br>
         </div>
     </main>
     <footer>
@@ -36,6 +43,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
