@@ -1,3 +1,4 @@
+// Mid-sized list of airport (includes most of the international airports in the world)
 var selectedAirports = [{
         "name": "Port Moresby Jacksons Intl ",
         "city": "Port Moresby",
@@ -8979,7 +8980,7 @@ var selectedAirports = [{
         "timezone": "1"
     }
 ];
-
+// fuse.js API to help us searching through our array of airports using  "approximate string matching"
 var fuseOptions = {
     keys: [
         "IATA", "city"
@@ -8991,8 +8992,9 @@ var options = {
     key: "IATA",
     fuseOptions: fuseOptions
 };
-
+// Min-sized list of airport (Gabriel added a few missing airports to the list such as (IAH)), this list includes only the name of the city and the IATA code for us to use in the duffel API as the user's "origin"
 var names = [
+    "",
     "Atlanta (ATL)",
     "Dallas-Fort Worth (DFW)",
     "New York (LGA)",
@@ -9178,7 +9180,6 @@ var names = [
     "Saltsy (BZY)",
     "Chisinau (KIV)",
     "Pristina (PRN)",
-    "Vrsac (\\N)",
     "Barahona (BRX)",
     "La Romana (LRM)",
     "Punta Cana (PUJ)",
@@ -9256,7 +9257,6 @@ var names = [
     "Limon (LIO)",
     "San Jose (SJO)",
     "San Salvador (SAL)",
-    "San Salvador (\\N)",
     "Cap Haitien (CAP)",
     "Port-au-prince (PAP)",
     "Cayo Largo del Sur (CYO)",
@@ -9317,7 +9317,6 @@ var names = [
     "Multan (MUX)",
     "Peshawar (PEW)",
     "Quetta (UET)",
-    "Islamabad (\\N)",
     "Basrah (BSR)",
     "Aleppo (ALP)",
     "Damascus (DAM)",
@@ -9784,7 +9783,6 @@ var names = [
     "Glasgow (GGW)",
     "Portsmouth (PSM)",
     "Nicosia (ECN)",
-    "Győr (\\N)",
     "Sármellék (SOB)",
     "Banja Luka (BNX)",
     "Isparta (ISE)",
@@ -9827,7 +9825,6 @@ var names = [
     "Wenzhou (WNZ)",
     "Imo (QOW)",
     "Punta del Este (PDP)",
-    "Ternopol (\\N)",
     "Ramenskoe (ZIA)",
     "Null (TZL)",
     "Gary (GYY)",
@@ -9835,7 +9832,6 @@ var names = [
     "Nikolayev (NLV)",
     "Mont-Tremblant (YTM)",
     "Colonia (CYR)",
-    "Cabo San Lucas (\\N)",
     "Pedro Juan Caballero (PJC)",
     "Sharq Al-Owainat (GSQ)",
     "Jijiga (JIJ)",
@@ -9873,31 +9869,26 @@ var names = [
     "Doha (DOH)",
     "Melo (MLZ)",
     "Artigas (ATI)",
-    "Mărculeşti (\\N)",
-    "Cahul (\\N)",
     "Karaj (PYK)",
     "Tamchy (IKU)",
     "Hyderabad (HYD)",
-    "Vancouver (\\N)",
     "Sabetta (SBT)",
     "Diass (DSS)",
     "Palenque (PQM)",
-    "Birnin Kebbi (\\N)",
     "Bauchi (BCU)",
     "Gombe (GMO)",
-    "Dutse (\\N)",
     "Manzini (SHO)",
     "Duqm (DQM)",
-    "Bay St. Louis (\\N)",
     "Kannur (CNN)",
     "Islamabad (ISB)",
     "Murcia (RMU)"
 ];
+
+// We used select2 API to load the data and load dropdown options from our local names
 $(document).ready(function() {
     $("#search-destination").fuzzyComplete(selectedAirports, options);
     $("#search-destination").select2({
         placeholder: "Where are you flying from?",
         data: names
     })
-
 });

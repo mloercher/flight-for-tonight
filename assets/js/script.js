@@ -9,6 +9,8 @@
 // display the available flights
 
 // variables
+// var origin = $("#search-destination").val();
+var start = document.querySelector('#button-addon2');
 var expectedPrice = [];
 var iataCodes = ["ORD", "LAX"];
 
@@ -18,34 +20,34 @@ var iataCodes = ["ORD", "LAX"];
 
 var objects = {
     "data": {
-        "slices": [
-
-        ],
+        "slices": [],
         "passengers": [{
-                "family_name": "Earhart",
-                "given_name": "Amelia",
+                "family_name": "Adventure",
+                "given_name": "Ahead",
                 "type": "adult"
             },
             {
-                "age": 14
+                "age": 18
             }
         ],
         "cabin_class": "economy"
     }
 }
 var response = async function() {
-    await fetch('https://api.duffel.com/air/offer_requests', {
+    //console.log(objects);
+    await fetch('https://uatapi.smartechc.com/api/test/duffelsearch', {
             method: 'POST',
             // mode: 'cors',
             // dataType: 'jsonp',
+            // cors: true,
             headers: {
-                'Accept-Encoding': 'gzip',
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Duffel-Version': 'beta',
-                'Authorization': 'Bearer duffel_test_gpSjOeTMv_1gYzoDQkg-VgkqPY5Ab3UXRpeleMEfk8K',
-                'Access-Control-Allow-Origin': '*',
-                // 'Access-Control-Allow-Headers': 'Content-Type, Accept',
+                // 'Accept-Encoding': 'gzip',
+                // 'Accept': 'application/json',
+                'Content-Type': 'application/json'
+                    // 'Duffel-Version': 'beta',
+                    // 'Authorization': 'Bearer duffel_test_gpSjOeTMv_1gYzoDQkg-VgkqPY5Ab3UXRpeleMEfk8K',
+                    // 'Access-Control-Allow-Origin': '*',
+                    // 'Access-Control-Allow-Headers': 'Content-Type, Accept',
             },
             body: JSON.stringify(objects)
         }).then(function(response) {
@@ -60,27 +62,25 @@ var response = async function() {
         .catch(function(error) {
             console.log(error);
         });
-
 }
 
 
-// console.log(response);
-
 function tempObj() {
+
     for (x in iataCodes) {
         var tempObj = {
-            origin: 'JFK',
+            origin: $("#search-destination").val().split('(')[1].replace(')', '').trim(),
             destination: iataCodes[x],
-            departure_date: '2021-11-12'
+            departure_date: $("#search-date").val()
         }
         objects.data.slices.push(tempObj);
     }
     console.log(response());
 }
 
-
-tempObj();
-// functions
+start.addEventListener("click", tempObj)
+    // tempObj();
+    // functions
 
 // callbacks
 // 🚀 start
