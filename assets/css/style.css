@@ -51,3 +51,33 @@ footer {
     text-align: center;
     width: 100%;
 }
+
+input,
+li {
+    color: rgb(17, 121, 103) !important;
+    text-align: center;
+}
+
+.app-description {
+    color: rgb(17, 121, 103);
+    background-color: rgb(255, 255, 255, .75);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#search-date,
+#search-budget {
+    border-bottom: solid white;
+    color: white !important;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255)!important;
+    opacity: 95%;
+}

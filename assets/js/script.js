@@ -15,8 +15,6 @@ var iataCodes = ["ORD", "LAX"];
 // const params = {
 //     id: 123
 // }
-AirportInput("search-destination")
-console.log(AirportInput);
 
 var objects = {
     "data": {
@@ -39,13 +37,15 @@ var response = async function() {
     await fetch('https://api.duffel.com/air/offer_requests', {
             method: 'POST',
             // mode: 'cors',
+            // dataType: 'jsonp',
             headers: {
                 'Accept-Encoding': 'gzip',
                 'Accept': 'application/json',
                 'Content-Type': 'application/json',
                 'Duffel-Version': 'beta',
                 'Authorization': 'Bearer duffel_test_gpSjOeTMv_1gYzoDQkg-VgkqPY5Ab3UXRpeleMEfk8K',
-                'Access-Control-Allow-Origin': '*'
+                'Access-Control-Allow-Origin': '*',
+                // 'Access-Control-Allow-Headers': 'Content-Type, Accept',
             },
             body: JSON.stringify(objects)
         }).then(function(response) {
@@ -64,7 +64,7 @@ var response = async function() {
 }
 
 
-console.log(response);
+// console.log(response);
 
 function tempObj() {
     for (x in iataCodes) {
