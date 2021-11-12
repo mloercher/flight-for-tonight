@@ -8,9 +8,6 @@
 // compare the price for different flights against the users budget 
 // display the available flights
 
-//Gabriel will update CORS branch 11/11
-
-
 // variables
 var expectedPrice = [];
 var iataCodes = ["ORD", "LAX"];
@@ -39,37 +36,47 @@ var objects = {
 var response = async function() {
     await fetch('https://api.duffel.com/air/offer_requests', {
             method: 'POST',
+            // mode: 'cors',
             headers: {
-                'Authorization': 'Bearer duffel_test_gpSjOeTMv_1gYzoDQkg-VgkqPY5Ab3UXRpeleMEfk8K',
-                'Duffel-Version': 'beta',
-                'Accept': 'application/json',
                 'Accept-Encoding': 'gzip',
+                'Accept': 'application/json',
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'index.html'
+                'Duffel-Version': 'beta',
+                'Authorization': 'Bearer duffel_test_gpSjOeTMv_1gYzoDQkg-VgkqPY5Ab3UXRpeleMEfk8K',
+                'Access-Control-Allow-Origin': '*'
             },
             body: JSON.stringify(objects)
+        }).then(function(response) {
+            if (response.ok) {
+                response.json().then(function(data) {
+                    console.log(data);
+                });
+            } else {
+                alert("Error: " + response.statusText);
+            }
         })
         .catch(function(error) {
             console.log(error);
         });
+
 }
 
 
-// console.log(data);
+console.log(response);
 
 function tempObj() {
     for (x in iataCodes) {
         var tempObj = {
             origin: 'JFK',
             destination: iataCodes[x],
-            departure_date: '2021-11-01'
+            departure_date: '2021-11-12'
         }
         objects.data.slices.push(tempObj);
     }
     console.log(response());
 }
 
-// const data = await response.json();
+
 tempObj();
 // functions
 
