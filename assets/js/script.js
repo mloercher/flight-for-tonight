@@ -8,7 +8,6 @@
 // compare the price for different flights against the users budget 
 // display the available flights
 
-
 // variables
 var expectedPrice = [];
 var iataCodes = ["ORD", "LAX"];
@@ -16,6 +15,8 @@ var iataCodes = ["ORD", "LAX"];
 // const params = {
 //     id: 123
 // }
+AirportInput("search-destination")
+console.log(AirportInput);
 
 var objects = {
     "data": {
