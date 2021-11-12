@@ -15,6 +15,8 @@ var iataCodes = ["ORD", "LAX"];
 // const params = {
 //     id: 123
 // }
+AirportInput("search-destination")
+console.log(AirportInput);
 
 var objects = {
     "data": {
