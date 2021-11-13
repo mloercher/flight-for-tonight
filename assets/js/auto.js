@@ -9053,7 +9053,6 @@ var names = [
     "Niatougou (LRL)",
     "Antwerp (ANR)",
     "Ostend (OST)",
-    "Berlin (THF)",
     "Belfast (BFS)",
     "Birmingham (BHX)",
     "Cardiff (CWL)",
@@ -9723,7 +9722,6 @@ var names = [
     "Sarasota (SRQ)",
     "Bermuda (BDA)",
     "Moline (MLI)",
-    "Panama City (PFN)",
     "Honiara (HIR)",
     "Papeete (PPT)",
     "Nauru (INU)",
@@ -9827,7 +9825,6 @@ var names = [
     "Punta del Este (PDP)",
     "Ramenskoe (ZIA)",
     "Null (TZL)",
-    "Gary (GYY)",
     "Cherkassy (CKC)",
     "Nikolayev (NLV)",
     "Mont-Tremblant (YTM)",
@@ -9886,9 +9883,14 @@ var names = [
 
 // We used select2 API to load the data and load dropdown options from our local names
 $(document).ready(function() {
+    $("#search-origin").fuzzyComplete(selectedAirports, options);
+    $("#search-origin").select2({
+        placeholder: "Where are you flying from?",
+        data: names
+    })
     $("#search-destination").fuzzyComplete(selectedAirports, options);
     $("#search-destination").select2({
-        placeholder: "Where are you flying from?",
+        placeholder: "Where's your next adventure?",
         data: names
     })
 });

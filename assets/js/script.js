@@ -12,11 +12,29 @@
 // var origin = $("#search-destination").val();
 var start = document.querySelector('#button-addon2');
 var expectedPrice = [];
-var iataCodes = ["ORD", "LAX"];
 
-// const params = {
-//     id: 123
-// }
+// function compare price against user's budget
+function budget(offers) {
+    var list = $("#results-list");
+    var money = $("#search-budget").val();
+    for (x in offers) {
+        if (parseInt(offers[x].total_amount) <= parseInt(money)) {
+            console.log(x);
+            offers[x].owner.name;
+            offers[x].total_amount;
+            var liEl = document.createElement("li");
+            list.append(liEl);
+            var airlineName = document.createElement("h3");
+            airlineName.textContent = offers[x].owner.name;
+            airlineName.className = "airline-name";
+            liEl.append(airlineName);
+            var totalAmount = document.createElement("p");
+            totalAmount.textContent = offers[x].total_amount;
+            totalAmount.className = "total-amount";
+            liEl.append(totalAmount);
+        }
+    }
+}
 
 var objects = {
     "data": {
@@ -54,6 +72,7 @@ var response = async function() {
             if (response.ok) {
                 response.json().then(function(data) {
                     console.log(data);
+                    budget(data.data.offers);
                 });
             } else {
                 alert("Error: " + response.statusText);
@@ -64,17 +83,21 @@ var response = async function() {
         });
 }
 
-
 function tempObj() {
 
-    for (x in iataCodes) {
+
+    var ori = $("#search-destination").val().split('(')[1].replace(')', '').trim();
+    var dest = $("#search-origin").val().split('(')[1].replace(')', '').trim();
+    if (dest !== ori && dest !== null && dest !== "") {
         var tempObj = {
-            origin: $("#search-destination").val().split('(')[1].replace(')', '').trim(),
-            destination: iataCodes[x],
+            origin: ori,
+            destination: dest,
             departure_date: $("#search-date").val()
         }
         objects.data.slices.push(tempObj);
     }
+
+    console.log(objects);
     console.log(response());
 }
 
