@@ -3,6 +3,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    margin-top: 0;
+}
+
 
 /* change calendar input icon to white */
 
@@ -45,6 +49,7 @@ main {
 h1 {
     font-family: 'Permanent Marker', cursive;
     margin-bottom: 0 !important;
+    margin-top: 0;
 }
 
 p {
@@ -120,9 +125,15 @@ li {
     width: 100%;
 }
 
+.modal-close,
+#modal-h4,
+#modal-p {
+    color: rgb(17, 121, 103) !important;
+}
+
 @media only screen and (max-width: 720px) {
     main {
-        margin-top: 5rem;
+        margin-bottom: 5rem;
     }
     hr {
         display: none;
@@ -135,11 +146,15 @@ li {
         margin: auto;
         font-size: x-large;
     }
-    #origin-dropdown {
+    #origin-dropdown,
+    #destination-dropdown {
         margin-top: 1rem;
-        width: 95.5%;
+        width: 75%;
         display: flex;
         justify-content: center;
+    }
+    h1 {
+        margin-top: 0;
     }
     #inner-input-field {
         display: flex;
@@ -150,5 +165,11 @@ li {
         border: solid white 5px;
         padding: .5rem;
         background-color: rgb(17, 121, 103, .5);
+    }
+    .footer {
+        position: inherit;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
     }
 }

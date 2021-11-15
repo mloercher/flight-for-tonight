@@ -46,15 +46,23 @@
                     <div id="money">
                         <input type="text" id="search-budget" class="budget" placeholder="$">
                     </div>
-                    <button class="btn btn-primary" type="button" id="button-addon2">Search</button>
+                    <a href="destinations.html"><button class="btn btn-primary" type="submit" id="button-addon2">Search</button></a>
                 </div>
             </div>
             <br>
         </div>
-        <div class="results">
-            <ul id="results-list">
+        <!-- Modal Trigger -->
+        <a id="test" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
-            </ul>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 id="modal-h4">Something went wrong...</h4>
+                <p id="modal-p">Sorry, seems like we have to search for a new adventure.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="window.location.reload();">Agree</a>
+            </div>
         </div>
     </main>
     <footer>
@@ -73,6 +81,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@latest/dist/index.browser.min.js"></script> -->
     <script src="./assets/js/aliask-fuzzycomplete-4d9b3dd/dist/js/fuzzycomplete.min.js"></script>
+    <!-- <script src="./assets/js/pricelist.js"></script> -->
     <script src="./assets/js/auto.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
