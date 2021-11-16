@@ -31,14 +31,16 @@ function budget(offers) {
             if (!(temp.indexOf(tempStr) > -1)) {
                 temp.push(tempStr)
             }
-        } else if (temp.indexOf(tempStr) === -1) {
+        } else if (parseInt(offers[x].total_amount) > parseInt(money)) {
             $('#modal1').modal();
             $('#modal1').modal("open");
             console.log("Nothing Found");
+            return;
         }
     }
     console.log(temp);
     saveTemp(temp);
+    window.open("destinations.html", "_self");
 
 }
 
@@ -87,7 +89,7 @@ var response = async function() {
         .catch(function(error) {
             console.log(error);
         });
-    window.open("destinations.html", "_self");
+
 }
 
 function tempObj() {

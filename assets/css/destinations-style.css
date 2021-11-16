@@ -1,6 +1,11 @@
 * {
-    color: rgb(54, 112, 99);
+    color: white;
     font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    background-image: url(../images/inspiration_02.jpg);
+    background-attachment: fixed;
 }
 
 main,

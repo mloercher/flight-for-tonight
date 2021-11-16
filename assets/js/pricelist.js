@@ -1,27 +1,26 @@
 var temp1 = [];
+var info;
+var resultsTitle = document.querySelector("#showing-destination");
 // function compare price against user's budget
 function createElement(data) {
     var list = document.querySelector("#results-list");
     console.log(data);
 
     for (y in data) {
-        if (Array.isArray(data[y])) {
-            return
-        }
         console.log(data[y]);
-        var liEl = document.createElement("li");
-        list.appendChild(liEl);
-        var airlineName = document.createElement("h3");
-        airlineName.textContent = data[y].split(',')[0];
-        airlineName.className = "airline-name";
-        liEl.appendChild(airlineName);
-        var totalAmount = document.createElement("p");
-        totalAmount.textContent = "$" + data[y].split(',')[1];
-        totalAmount.className = "total-amount";
-        liEl.appendChild(totalAmount);
-
+        data[y].forEach(function(airport) {
+            var liEl = document.createElement("li");
+            list.appendChild(liEl);
+            var airlineName = document.createElement("h3");
+            airlineName.textContent = airport.split(',')[0];
+            airlineName.className = "airline-name";
+            liEl.appendChild(airlineName);
+            var totalAmount = document.createElement("p");
+            totalAmount.textContent = "$" + airport.split(',')[1];
+            totalAmount.className = "total-amount";
+            liEl.appendChild(totalAmount);
+        })
     }
-
 }
 
 function getTemp() {
