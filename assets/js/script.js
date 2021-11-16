@@ -19,9 +19,8 @@ var loader = {
   initialize: function () {
     var html =
       '<div class="loading-overlay"></div>' +
-      '<div class="overlay-img-container"><img src="./assets/images/planeTransBG.gif" alt="flying-plane-loading-screen"</div>';
-    //   +'<img src="./assets/images/238.gif" class="loading-overlay-img" alt="flying-plane-loading-screen">';
-
+      '<div class="overlay-img-container"><img src="./assets/images/gif-aviao.gif" class="loading-overlay-img" alt="flying-plane-loading-screen"</div>';
+ 
     $("body").append(html);
   },
 
@@ -29,15 +28,16 @@ var loader = {
     $(".loading-overlay").show();
     $(".overlay-img-container").show();
     $(".loading-overlay-img").show();
-  },
-
-  hideLoader: function () {
-    $(".loading-overlay").hide();
-    $(".overlay-img-container").hide();
-    $(".loading-overlay-img");
   }
+
+  // hideLoader: function () {
+  //   $(".loading-overlay").hide();
+  //   $(".overlay-img-container").hide();
+  //   $(".loading-overlay-img");
+  // }
 };
 
+//Initialize loader function 
 $(function () {
   loader.initialize();
 
