@@ -10,14 +10,16 @@
 
 // variables
 // var origin = $("#search-destination").val();
+
 var start = document.querySelector('#button-addon2');
+
 var expectedPrice = [];
 
 function saveTemp(temp) {
-    var airports = JSON.parse(localStorage.getItem("temp")) || [];
-    console.log(airports);
-    airports.push(temp);
-    localStorage.setItem("temp", JSON.stringify(airports));
+    localStorage.setItem("temp", JSON.stringify(temp));
+    var title = $("#search-origin").val() + "-" + $("#search-destination").val();
+    console.log(title);
+    localStorage.setItem("search-title", JSON.stringify(title));
 }
 
 // function compare price against user's budget
@@ -94,8 +96,8 @@ var response = async function() {
 
 function tempObj() {
     // window.location.href = "destinations.html";
-    var ori = $("#search-destination").val().split('(')[1].replace(')', '').trim();
-    var dest = $("#search-origin").val().split('(')[1].replace(')', '').trim();
+    var dest = $("#search-destination").val().split('(')[1].replace(')', '').trim();
+    var ori = $("#search-origin").val().split('(')[1].replace(')', '').trim();
     if (dest !== ori && dest !== null && dest !== "") {
         var tempObj = {
             origin: ori,
