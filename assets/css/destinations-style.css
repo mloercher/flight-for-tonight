@@ -18,7 +18,7 @@ body {
     font-weight: bolder;
     font-size: xx-large;
     text-align: center;
-    background-color: rgba(54, 112, 99);
+    background-color: rgba(54, 112, 99, .75);
     border-radius: 1rem;
     width: 50%;
     margin-left: auto;
