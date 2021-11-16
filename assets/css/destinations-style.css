@@ -45,6 +45,11 @@ p {
     width: 100%;
 }
 
+#new-search-button {
+    border-radius: .75rem !important;
+    width: 75%;
+}
+
 @media only screen and (max-width: 720px) {
     #results {
         font-family: 'Open Sans', sans-serif;
