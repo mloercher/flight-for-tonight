@@ -42,19 +42,29 @@ THEN I am shown a list of destinations and flights according to my budget...
 
 ## Technologies Used
 -HTML
+
 -CSS
+
 -JavaScript
+
 -Third Party APIs: Duffel
+
 -Plugins: Fuse.js, fuzzyComplete, select2
+
 -Frameworks: Materialize
+
 -Libraries: jQuery
 
 ## Resource Links
 
 Duffel: https://duffel.com/
+
 Fuse.js: https://fusejs.io/
+
 fuzzyComplete: https://github.com/aliask/fuzzycomplete
+
 select2: https://select2.org/
+
 jQuery: https://jquery.com/
 
 
