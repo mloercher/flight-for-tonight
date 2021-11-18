@@ -7,7 +7,9 @@ body {
     margin-top: 0;
 }
 
+
 /* Loader styling */
+
 .loading-overlay {
     display: none;
     background: rgba(26, 26, 26, 0.7);
@@ -16,10 +18,9 @@ body {
     height: 100%;
     z-index: 5;
     top: 0;
-
 }
 
-.overlay-img-container{
+.overlay-img-container {
     display: none;
     position: fixed;
     z-index: 7;
@@ -32,7 +33,7 @@ body {
     z-index: 1;
     /* width: 200px;
     height: 100px; */
-    border-radius: 5%; 
+    border-radius: 5%;
 }
 
 
@@ -77,7 +78,7 @@ main {
 h1 {
     font-family: 'Permanent Marker', cursive;
     margin-bottom: 0 !important;
-    margin-top: 0;
+    margin-top: 0 !important;
 }
 
 p {
@@ -86,9 +87,27 @@ p {
     font-size: x-large;
 }
 
-#date,
+#date {
+    width: 75%;
+    padding-top: 1rem;
+}
+
 #money {
     width: 75%;
+}
+
+#date,
+#money {
+    text-align: start;
+}
+
+label.active {
+    padding-top: 1rem;
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    font-size: large;
 }
 
 .footer {
@@ -96,7 +115,6 @@ p {
     bottom: 0;
     text-align: center;
     width: 100%;
-    
 }
 
 input,
@@ -152,6 +170,8 @@ li {
 
 #find-title {
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: xx-large;
 }
 
 .modal-close,
@@ -160,9 +180,14 @@ li {
     color: rgb(17, 121, 103) !important;
 }
 
-@media only screen and (max-width: 720px) {
+#showing-destination {
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 1300px) {
     main {
         margin-bottom: 5rem;
+        height: auto;
     }
     hr {
         display: none;
