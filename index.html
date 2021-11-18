@@ -22,16 +22,17 @@
         <div class="container center-align" id="intro">
             <h1>Flight For Tonight</h1>
             <h4>Where will your money take you?</h4>
-            <br>
+            <hr size="small" width="50%" color="white">
+
             <p class="app-description">We developed this app to free your sense of adventure! <br> All of us love to travel and money shouldn't impede us from doing so. Therefore, no matter what your financial situation is, we will help you find a destination. Just type your budget,
                 origin, departure date and get ready to discover your next journey!</p>
-            <br>
+
             <hr size="small" width="50%" color="white">
             <br>
             <div class="input-field">
                 <div id="inner-input-field">
                     <p id="find-title">Let's find your next adventure:</p>
-                    <br>
+
                     <div id="origin-dropdown">
                         <select id="search-origin" class="autocomplete"></select>
                         <label for="search-origin"></label>
@@ -41,10 +42,11 @@
                         <label for="search-destination"></label>
                     </div>
                     <div id="date">
-                        <input type="date" id="search-date" class="datepicker" placeholder="Departure Date">
+                        <label for="departure date">Departure Date:</label>
+                        <input type="date" placeholder="Departure Date" id="search-date" class="datepicker">
                     </div>
                     <div id="money">
-
+                        <label for="budget">Budget:</label>
                         <input type="text" id="search-budget" class="budget" placeholder="$">
                     </div>
                     <a href="destinations.html"><button class="btn btn-primary" type="submit" id="button-addon2">Search</button></a>
@@ -58,11 +60,11 @@
         <!-- Modal Structure -->
         <div id="modal1" class="modal">
             <div class="modal-content">
-                <h4 id="modal-h4">Something went wrong...</h4>
-                <p id="modal-p">Sorry, seems like we have to search for a new adventure.</p>
+                <h4 id="modal-h4">This destination might be out of our budget...</h4>
+                <p id="modal-p">Shall we search for a new adventure?</p>
             </div>
             <div class="modal-footer">
-                <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="window.location.reload();">Agree</a>
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="window.location.reload();">Let's do it!</a>
             </div>
         </div>
     </main>
