@@ -59,8 +59,8 @@ function saveTemp(temp) {
 
 // function compare price against user's budget
 function budget(offers) {
-    var temp = [];
 
+    var temp = [];
     var money = $("#search-budget").val();
     for (x in offers) {
         if (parseInt(offers[x].total_amount) <= parseInt(money)) {
@@ -72,7 +72,6 @@ function budget(offers) {
             }
         }
     }
-    console.log(temp.length);
     if (temp.length === 0) {
         $("#modal1").modal();
         $("#modal1").modal("open");
@@ -100,20 +99,10 @@ var objects = {
     },
 };
 var response = async function() {
-    //console.log(objects);
     await fetch("https://uatapi.smartechc.com/api/test/duffelsearch", {
             method: "POST",
-            // mode: 'cors',
-            // dataType: 'jsonp',
-            // cors: true,
             headers: {
-                // 'Accept-Encoding': 'gzip',
-                // 'Accept': 'application/json',
                 "Content-Type": "application/json",
-                // 'Duffel-Version': 'beta',
-                // 'Authorization': 'Bearer duffel_test_gpSjOeTMv_1gYzoDQkg-VgkqPY5Ab3UXRpeleMEfk8K',
-                // 'Access-Control-Allow-Origin': '*',
-                // 'Access-Control-Allow-Headers': 'Content-Type, Accept',
             },
             body: JSON.stringify(objects),
         })
@@ -133,7 +122,6 @@ var response = async function() {
 };
 
 function tempObj() {
-    // window.location.href = "destinations.html";
     var dest = $("#search-destination")
         .val()
         .split("(")[1]
@@ -148,9 +136,8 @@ function tempObj() {
         };
         objects.data.slices.push(tempObj);
     }
-
-    console.log(objects);
-    console.log(response());
+    // console.log(objects);
+    // console.log(response());
 }
 
 // clear past dates in calendar
@@ -171,12 +158,8 @@ $(function() {
 $(document).ready(function() {
     $("#test").hide();
 });
+// 🚀 start
 start.addEventListener("click", function(event) {
     event.preventDefault();
     tempObj();
 });
-// tempObj();
-// functions
-
-// callbacks
-// 🚀 start

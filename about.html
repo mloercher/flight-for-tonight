@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <title>Flight For Tonight</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>">
+</head>
+​
+
+<body>
+    <main>
+        <div class="container center-align" id="intro">
+            <h1>About Us</h1>
+            <h4>Get to know the team!</h4>
+            <br>
+            <div>
+                <button class="btn btn-primary searchFlights" type="submit"><a
+                        href="index.html">Search Flights</a></button>
+            </div>
+            <br>
+            <div class="card">
+                <a class="team-member" href="https://github.com/alvaroormeno">Alvaro O.</a>
+                <br>
+                <section class="profile-card">
+                    <img src="../flight-for-tonight/assets/images/Alvaro.jpg" alt="" class="profile-img">
+                    <p class="profile-text">Hi! I am Alvaro Ormeno, born in Miami raised in Lima and now living in the big apple! A photogrpahy and travel enthusiast who moved to NYC in 2014 to open an online peruvian bakery, worked as a trade analyst for the Peruvian government
+                        in NY and now in the middle of a career shift. </p>
+                </section>
+            </div>
+            <br>
+            <div class="card">
+                <a class="team-member" href="">Gabriel A.</a>
+                <section class="profile-card">
+                    <img src="assets/images/Gabriel Ansong.jpg" alt="" class="profile-img">
+                    <div class="info">
+                        <p class="profile-text">Hello my name is Gabriel Ansong. I am a pianist, basketball fan, and I love taking on new challenges in every aspect of my life.</p>
+                    </div>
+                </section>
+            </div>
+            <br>
+            <div class="card">
+                <a class="team-member" href="https://github.com/gallolopez1">Gabriel G.</a>
+                <br>
+                <section class="profile-card">
+                    <img src="assets/images/Gabriel Gallo.jpg" alt="" class="profile-img">
+                    <p class="profile-text">Hi! I am Gabriel but you can call me Gallo. Dog lover, bibliophile and gym enthusiast. Originally from the beautiful and vibrant city of Guadalajara, Mexico, where I studied architecture and graduated from Tec de Monterrey. I then
+                        started working as a freelancer, developing architectural concepts, schematic designs and a few websites. In 2020 I moved to the craziest of cities (New York City), where I currently live and work as an architect designer for Rockwell
+                        Group.
+                    </p>
+                </section>
+            </div>
+            <br>
+            <div class="card">
+                <a class="team-member" href="https://github.com/mloercher">Mark L.</a>
+                <br>
+                <section class="profile-card">
+                    <img src="assets/images/Mark Loercher.jpg" alt="" class="profile-img">
+                    <p class="profile-text">Hello! My name is Mark Loercher and I am a Musician, Producer, Cat-Dad and Web Developer. When I am not writing music or writing code, you can find me on the hiking trail.
+                    </p>
+                </section>
+            </div>
+            <br>
+            <hr size="small" width="100%" color="white">
+        </div>
+        <!-- Modal Trigger -->
+        <a id="test" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> ​
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4 id="modal-h4">Something went wrong...</h4>
+                <p id="modal-p">Sorry, seems like we have to search for a new adventure.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat" onclick="window.location.reload();">Agree</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h5>&copy; 2021 Team Fiber</h5>
+        </div>
+    </footer>
+    ​
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> -->
+    <!-- Airport autcomplete CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@latest/dist/index.browser.min.js"></script> -->
+    <script src="./assets/js/aliask-fuzzycomplete-4d9b3dd/dist/js/fuzzycomplete.min.js"></script>
+    <!-- <script src="./assets/js/pricelist.js"></script> -->
+    <script src="./assets/js/auto.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+​
+
+</html>

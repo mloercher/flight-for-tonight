@@ -1,12 +1,7 @@
-var airlines = [
-    { name: "Transavia", url: "https://www.transavia.com/" },
-    { name: "Volaris", url: "https://www.volaris.com/" },
-    { name: "Westjet", url: "https://www.westjet.com/en-us" }
-
-]
 var temp1 = [];
 var info;
 var newSearch = document.querySelector("#new-search-button");
+var secondNewSearch = document.querySelector("#new-search-button-2");
 var searchTitle = document.querySelector("#showing-destination");
 // function compare price against user's budget
 function createElement(data) {
@@ -100,6 +95,10 @@ function clearSearch() {
 var data = getTemp();
 createElement(data);
 newSearch.addEventListener("click", function() {
+    clearSearch();
+    window.open("index.html", "_self");
+});
+secondNewSearch.addEventListener("click", function() {
     clearSearch();
     window.open("index.html", "_self");
 });

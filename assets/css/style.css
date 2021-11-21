@@ -43,10 +43,6 @@ body {
     filter: invert(1);
 }
 
-main {
-    margin-top: 3rem;
-}
-
 #intro {
     display: flex;
     flex-direction: column;
@@ -184,6 +180,17 @@ li {
     font-size: 3rem;
 }
 
+a {
+    color: inherit !important;
+}
+
+.about-btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
 @media only screen and (max-width: 1300px) {
     main {
         margin-bottom: 5rem;
@@ -225,5 +232,10 @@ li {
         bottom: 0;
         text-align: center;
         width: 100%;
+    }
+    .about-btn {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 2rem;
     }
 }
