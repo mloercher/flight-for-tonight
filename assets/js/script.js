@@ -137,7 +137,7 @@ function tempObj() {
         objects.data.slices.push(tempObj);
     }
     // console.log(objects);
-    // console.log(response());
+    console.log(response());
 }
 
 // clear past dates in calendar
