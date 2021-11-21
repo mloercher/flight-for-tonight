@@ -9884,6 +9884,7 @@ var names = [
 // We used select2 API to load the data and load dropdown options from our local names
 $(document).ready(function() {
     $("#search-origin").fuzzyComplete(selectedAirports, options);
+    // select2 helps us use autocomplete when having two strings from an array
     $("#search-origin").select2({
         placeholder: "Where are you flying from?",
         data: names

@@ -16,14 +16,15 @@ var expectedPrice = [];
 
 // Loader object
 var loader = {
+
     initialize: function() {
         var html =
             '<div class="loading-overlay"></div>' +
             '<div class="overlay-img-container"><img src="./assets/images/gif-aviao.gif" class="loading-overlay-img" alt="flying-plane-loading-screen"</div>';
-
+        // append gif to body
         $("body").append(html);
     },
-
+    // show loader
     showLoader: function() {
         $(".loading-overlay").show();
         $(".overlay-img-container").show();
@@ -51,9 +52,11 @@ $(function() {
 });
 
 function saveTemp(temp) {
+    //save fetched data price to local storage
     localStorage.setItem("temp", JSON.stringify(temp));
     var title = $("#search-origin").val() + " - " + $("#search-destination").val();
     console.log(title);
+    //save origin and destination to local storage to append later
     localStorage.setItem("search-title", JSON.stringify(title));
 }
 
@@ -62,6 +65,7 @@ function budget(offers) {
 
     var temp = [];
     var money = $("#search-budget").val();
+    // loop through offers to see if it meets budget criteria
     for (x in offers) {
         if (parseInt(offers[x].total_amount) <= parseInt(money)) {
             if (!(offers[x].owner.name == "Duffel Airways")) {
@@ -72,10 +76,12 @@ function budget(offers) {
             }
         }
     }
+    // if the criteria is not met then prompt a message to the user
     if (temp.length === 0) {
         $("#modal1").modal();
         $("#modal1").modal("open");
         console.log("Nothing Found");
+        // else save the data and go to destinations page
     } else {
         saveTemp(temp);
         window.open("destinations.html", "_self");
@@ -83,6 +89,7 @@ function budget(offers) {
 
 }
 
+// used to post object to API
 var objects = {
     data: {
         slices: [],
@@ -99,6 +106,7 @@ var objects = {
     },
 };
 var response = async function() {
+    // fetch data from duffle api
     await fetch("https://uatapi.smartechc.com/api/test/duffelsearch", {
             method: "POST",
             headers: {
@@ -122,6 +130,7 @@ var response = async function() {
 };
 
 function tempObj() {
+    // retrieve data from user to post and fetch data later from Duffel API
     var dest = $("#search-destination")
         .val()
         .split("(")[1]

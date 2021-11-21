@@ -3,13 +3,15 @@ var info;
 var newSearch = document.querySelector("#new-search-button");
 var secondNewSearch = document.querySelector("#new-search-button-2");
 var searchTitle = document.querySelector("#showing-destination");
-// function compare price against user's budget
+// generate and show data from local storage
 function createElement(data) {
     var list = document.querySelector("#results-list");
     var title = JSON.parse(localStorage.getItem("search-title"));
     searchTitle.innerHTML = "Showing results for: <br/>" + title;
+    //loop through temp 1
     for (y in data) {
         var links;
+        // switch based on airline's link
         switch (data[y].split(',')[0]) {
             case "Aegean Airlines":
                 links = "https://en.aegeanair.com/"
@@ -63,6 +65,7 @@ function createElement(data) {
                 links = "https://www.united.com/en/us"
                 break;
         }
+        // append information to destinations page
         var liEl = document.createElement("li");
         list.appendChild(liEl);
         var airlineLink = document.createElement('a');
@@ -81,6 +84,7 @@ function createElement(data) {
 }
 
 function getTemp() {
+    // get stored data from local storage to push 
     var y = JSON.parse(localStorage.getItem("temp")) || [];
     for (x in y) {
         temp1.push(y[x]);
@@ -88,7 +92,9 @@ function getTemp() {
     return temp1;
 }
 
+// when starting a new search user must hit the button so that their local storage is cleared and they can search for new flights
 function clearSearch() {
+
     localStorage.clear();
     location.reload();
 }
