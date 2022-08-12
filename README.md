@@ -41,13 +41,13 @@ THEN I am shown a list of destinations and flights according to my budget...
 ```
 
 ## Technologies Used
--HTML
--CSS
--JavaScript
--Third Party APIs: Duffel
--Plugins: Fuse.js, fuzzyComplete, select2
--Frameworks: Materialize
--Libraries: jQuery
+*HTML
+*CSS
+*JavaScript
+*Third Party APIs: Duffel
+*Plugins: Fuse.js, fuzzyComplete, select2
+*Frameworks: Materialize
+*Libraries: jQuery
 
 ## Resource Links
 
