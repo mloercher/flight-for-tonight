@@ -52,9 +52,13 @@ THEN I am shown a list of destinations and flights according to my budget...
 ## Resource Links
 
 Duffel: https://duffel.com/
+
 Fuse.js: https://fusejs.io/
+
 fuzzyComplete: https://github.com/aliask/fuzzycomplete
+
 select2: https://select2.org/
+
 jQuery: https://jquery.com/
 
 

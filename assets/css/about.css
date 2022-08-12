@@ -1,0 +1,74 @@
+* {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    width: 100% !important;
+    margin: 1rem !important;
+}
+
+button {
+    border-radius: .25rem !important;
+}
+
+.profile-card {
+    display: flex;
+}
+
+a.team-member {
+    color: white !important;
+    font-size: xx-large;
+    text-decoration: underline;
+    margin-top: 2rem !important;
+}
+
+.card {
+    background-color: rgb(54, 112, 99, .5) !important;
+    border-radius: 1rem !important;
+}
+
+img {
+    width: 15rem;
+    height: 15rem;
+    padding-top: 0 !important;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* Search Flight Button at About us Page */
+
+.searchFlights {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    background-image: url(../images/inspiration_02.jpg);
+    background-attachment: fixed;
+}
+
+.footer {
+    position: inherit !important;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .profile-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 2rem;
+    }
+}

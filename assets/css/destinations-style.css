@@ -45,7 +45,7 @@ p {
     width: 100%;
 }
 
-#new-search-button {
+.btn-large {
     border-radius: .75rem !important;
     width: 75%;
 }
